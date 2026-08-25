@@ -1,9 +1,9 @@
 [SddmGreeterTheme]
 Name=sddm-lain-theme
-Description=Inspired by fauux.neocities.org/login
-Author=Ioresolution
+Description=Inspired by fauux.neocities.org/login, created by Faisal
+Author=Faisal
 License=GPLv3
 Type=sddm-theme
-Version=0.1
+Version=0.2
 MainScript=Main.qml
-
+QtVersion=6
