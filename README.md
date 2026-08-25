@@ -11,9 +11,18 @@
 
 [https://fauux.neocities.org](https://fauux.neocities.org) inspired sddm theme. <br><br>
 It does very bare minimum. Just login.
+
+### Whats new?
+
+- login music
+- background music 
+- added background
+
+all acquired from fauux's login page.
+
 ## Installation
 
-- clone this directory
+- `git clone https://github.com/faisalhsn/sddm-wired-theme`
 - copy directory to  `/usr/share/sddm/themes/` using `sudo cp -r sddm-wired-theme /usr/share/sddm/themes/`
 - install ```sddm``` ```qt5-multimedia```  ```qt5-quickcontrols``` ````noto-fonts````
 - set sddm as your current login manager ```systemctl enable sddm && systemctl start sddm```

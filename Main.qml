@@ -2,12 +2,28 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as Qqc
 import SddmComponents 2.0
+import QtMultimedia
 Rectangle {
     color: "black"
     width: Window.width
     height: Window.height
-    Connections {
-        target: sddm
+
+    AnimatedImage {
+        anchors.fill: parent
+        source: "bg.gif"
+        fillMode: Image.PreserveAspectCrop
+    }
+    MediaPlayer {
+        id: bgMusic
+        source: "bg_music.mp3"
+        audioOutput: AudioOutput {}
+        autoPlay: true
+        loops: MediaPlayer.Infinite
+    }
+    MediaPlayer {
+        id: loginSound
+        source: "login.wav"
+        audioOutput: AudioOutput {}
     }
     ColumnLayout {
         AnimatedImage{
@@ -61,7 +77,6 @@ Rectangle {
                 implicitWidth: 200
                 border.color: "#c1b492"
             }
-
             KeyNavigation.backtab: username; KeyNavigation.tab: null
             Keys.onPressed: {
                 if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
@@ -94,6 +109,7 @@ Rectangle {
         }
     }
     Component.onCompleted: {
+        loginSound.play()
         if (username.text == "") {
             username.focus = true
         } else {
