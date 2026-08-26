@@ -1,3 +1,4 @@
+![](https://github.com/ioresolution/sddm-wired-theme/blob/master/Preview.png)
 <div align="center">
   <h1>sddm-wired-theme</h1>
     <a href="https://github.com/ioresolution/sddm-wired-theme">
@@ -14,8 +15,8 @@ It does very bare minimum. Just login.
 
 ### Whats new?
 
-- login music
-- background music 
+- login sound
+- looping background music 
 - added background
 
 all acquired from fauux's login page.
@@ -42,5 +43,3 @@ Open up your configuration file `/etc/sddm.conf` and set `sddm-wired-theme` as y
 Current=sddm-wired-theme
 ``` 
 
-## Preview
-![](https://github.com/ioresolution/sddm-wired-theme/blob/master/Preview.png)
