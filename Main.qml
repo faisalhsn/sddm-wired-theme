@@ -18,8 +18,9 @@ Rectangle {
     MediaPlayer {
         id: bgMusic
         source: "bg_music.mp3"
+	audioOutput: AudioOutput {}
+        autoPlay: true
         loops: MediaPlayer.Infinite
-        audioOutput: AudioOutput {}
     }
 
     MediaPlayer {
