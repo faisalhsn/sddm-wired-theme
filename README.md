@@ -1,4 +1,3 @@
-![](https://github.com/ioresolution/sddm-wired-theme/blob/master/Preview.png)
 <div align="center">
   <h1>sddm-wired-theme</h1>
     <a href="https://github.com/ioresolution/sddm-wired-theme">
@@ -43,3 +42,4 @@ Open up your configuration file `/etc/sddm.conf` and set `sddm-wired-theme` as y
 Current=sddm-wired-theme
 ``` 
 
+![](https://github.com/ioresolution/sddm-wired-theme/blob/master/Preview.png)

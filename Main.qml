@@ -1,8 +1,9 @@
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Qqc
-import SddmComponents 2.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Qqc
+import SddmComponents
 import QtMultimedia
+
 Rectangle {
     color: "black"
     width: Window.width
@@ -13,18 +14,21 @@ Rectangle {
         source: "bg.gif"
         fillMode: Image.PreserveAspectCrop
     }
+
     MediaPlayer {
         id: bgMusic
         source: "bg_music.mp3"
-        audioOutput: AudioOutput {}
-        autoPlay: true
         loops: MediaPlayer.Infinite
+        audioOutput: AudioOutput {}
     }
+
     MediaPlayer {
         id: loginSound
         source: "login.wav"
         audioOutput: AudioOutput {}
+
     }
+
     ColumnLayout {
         AnimatedImage{
             Layout.alignment: Qt.AlignCenter
@@ -55,7 +59,7 @@ Rectangle {
             KeyNavigation.backtab: shutdownBtn; KeyNavigation.tab: password
             Keys.onPressed: {
                 if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                    sddm.login(username.text, password.text, 0) // Use a default session index (0)
+                    sddm.login(username.text, password.text, 0)
                     event.accepted = true
                 }
             }
@@ -80,7 +84,7 @@ Rectangle {
             KeyNavigation.backtab: username; KeyNavigation.tab: null
             Keys.onPressed: {
                 if (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) {
-                    sddm.login(username.text, password.text, 0) // Use a default session index (0)
+                    sddm.login(username.text, password.text, 0)
                     event.accepted = true
                 }
             }
@@ -104,7 +108,7 @@ Rectangle {
             }
             MouseArea {
                 anchors.fill: parent
-                onClicked: sddm.login(username.text, password.text, 0) // Use a default session index (0)
+                onClicked: sddm.login(username.text, password.text, 0)
             }
         }
     }
